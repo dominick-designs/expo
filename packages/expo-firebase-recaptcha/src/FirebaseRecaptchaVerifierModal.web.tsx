@@ -1,6 +1,7 @@
-import { FirebaseAuthApplicationVerifier } from 'expo-firebase-recaptcha';
 import firebase from 'firebase';
 import * as React from 'react';
+
+import { FirebaseAuthApplicationVerifier } from './FirebaseRecaptcha.types';
 
 interface Props {
   attemptInvisibleVerification?: boolean;
