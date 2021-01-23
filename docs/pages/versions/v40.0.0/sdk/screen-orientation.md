@@ -143,6 +143,37 @@ Sets the screen orientation back to the `OrientationLock.DEFAULT` policy.
 
 Returns a promise with `void` value, resolving when the orientation is set.
 
+
+```
+import React, { useEffect } from "react";
+import { Text, View } from 'react-native';
+import * as ScreenOrientation from 'expo-screen-orientation';
+
+export default function App() {
+export default function App() {
+  useEffect(() => {
+    lockOrientation();
+  }, []);
+
+  const lockOrientation = async () => {
+ 
+    await ScreenOrientation.unlockAsync();
+  };
+
+return (
+    <View >
+      <Text>
+        Change code in the editor and watch it change on your phone! Save to get a shareable url.
+      </Text>     
+    </View>
+  );
+
+}
+
+```
+
+
+
 ### `ScreenOrientation.getOrientationAsync()`
 
 Gets the current screen orientation.
